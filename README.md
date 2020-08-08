@@ -5,11 +5,15 @@ Open terminal and run
 python TextSumarization.py [-h] [-path PATH] [-model MODEL]
 
 # files are Resposible:
-Textsumarization.py,
-Utility.py
+* Textsumarization.py,
+* Utility.py
 # Ex:
 python TextSumarization.py -path "TextFilepath",-model "MODEL"
 By default it uses DistilBertModel and the Test Data('Final_news.csv') with contain in this Repo
+# optional arguments:
+*  -h, --help    show this help message and exit
+*  -path PATH    File path
+*  -model MODEL  [xlnet-base-cased,distilbert-base-uncased,albert-base-v1]
 
 
 # Works for pretrainedModel of Bart:
