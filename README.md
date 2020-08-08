@@ -23,6 +23,11 @@ By default it uses DistilBertModel and the Test Data('Final_news.csv') with cont
 * DistilBertModel('distilbert-base-uncased')
 * AlbertModel('albert-base-v1','albert-large-v1')
 
+# input:
+* .csv file with Description header.
+# output
+* .csv with BEfore and After summary Columns
+
 # Note: 
 This Repo is under Development by the ineuron Intern batch 
 
