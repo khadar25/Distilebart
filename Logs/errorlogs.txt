@@ -1,1 +1,0 @@
-2020-08-08/19:47:27		Failed to run the runner script Select models only in this ['bert-base-uncased', 'xlnet-base-cased', 'distilbert-base-uncased', 'albert-base-v1'] model list

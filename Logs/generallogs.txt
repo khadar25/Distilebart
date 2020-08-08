@@ -1,3 +1,10 @@
-2020-08-08/19:47:27		Entered the runner file --> Running the script now !
-2020-08-08/19:47:27		Validation of the model is in Process !
-2020-08-08/19:47:27		Flow Exist abnormally please look err file for more info !
+2020-08-08/21:32:23		Entering getdataframe Method !
+2020-08-08/21:32:23		Entered getsummary method 
+2020-08-08/21:32:23		Trying to load model,articles,tokenizer !
+2020-08-08/21:32:23		Entering getdata Method !
+2020-08-08/21:32:23		Entering loadmodel method !
+2020-08-08/21:32:23		Checking the model name entered by user!
+2020-08-08/21:32:29		Entered step of extracting summaries !
+2020-08-08/21:32:29		Generating summaries now !
+2020-08-08/21:32:23		Entered the runner file --> Running the script now !
+2020-08-08/21:35:06		Writing summaries to a text file now !
