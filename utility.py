@@ -2,9 +2,7 @@ from summarizer import Summarizer
 import textwrap
 import os
 import pandas as pd
-import logging
-logger1 = logging.getLogger('1')
-logger1.addHandler(logging.FileHandler('logger1'))
+
 class TextSumarization():
     def Summarizer(articles,model='distilbert-base-uncased'):
         try:
@@ -18,7 +16,7 @@ class TextSumarization():
                 #print(wrapper.fill(summary_text))
             return summary_ls
         except Exception as e:
-         logger1.error("Invalid path specified :",e, exc_info=True)
+            raise RuntimeError("Invalid path specified :",e, exc_info=True)
 
 
     def article_preprocessor(filepath):
@@ -40,9 +38,10 @@ class TextSumarization():
                     return articles
 
             else:
-               logger1.error("Invalid Exe:", exc_info=True)
+                raise RuntimeError("Invalid Exe:", exc_info=True)
+
         except Exception as e:
-            logger1.error("Invalid path specified :",e, exc_info=True)
+            raise RuntimeError("Invalid path specified :",e, exc_info=True)
 
     def model_selection(model):
         models =['bert-base-uncased','xlnet-base-cased','distilbert-base-uncased','albert-base-v1']
