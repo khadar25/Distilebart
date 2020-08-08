@@ -32,6 +32,4 @@ By default it uses DistilBertModel and the Test Data('Final_news.csv') with cont
 This Repo is under Development by the ineuron Intern batch 
 
 # License
-© 2020 
-
-# This repository is licensed under the MIT license. See LICENSE for details.
+© 2020 This repository is licensed under the MIT license. See LICENSE for details.
