@@ -1,7 +1,4 @@
 ## TextSumarization_DistilBertModel
-It takes an 
-[-path PATH] 
-[-model MODEL]
 
 # How to use it?
 Open terminal and run
