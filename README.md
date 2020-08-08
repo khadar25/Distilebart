@@ -16,11 +16,11 @@ By default it uses DistilBertModel and the Test Data('Final_news.csv') with cont
 
 
 # Works for pretrainedModel of Bart:
-.BertModel('bert-base-uncased','bert-large-uncased')
-.XLNetModel('xlnet-base-cased')
-.XLMModel('xlm-mlm-enfr-1024')
-.DistilBertModel('distilbert-base-uncased')
-.AlbertModel('albert-base-v1','albert-large-v1')
+* BertModel('bert-base-uncased','bert-large-uncased')
+* XLNetModel('xlnet-base-cased')
+* XLMModel('xlm-mlm-enfr-1024')
+* DistilBertModel('distilbert-base-uncased')
+* AlbertModel('albert-base-v1','albert-large-v1')
 
 # Note: 
 This Repo is under Development by the ineuron Intern batch 
