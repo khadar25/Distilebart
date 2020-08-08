@@ -2,19 +2,19 @@
 
 # How to use it?
 Open terminal and run
-python TextSumarization.py [-h] [-path PATH] [-model MODEL]
+python runner.py 
 
 # files are Resposible:
-* Textsumarization.py,
-* Utility.py
-# Ex:
-python TextSumarization.py -path "TextFilepath",-model "MODEL"
-By default it uses DistilBertModel and the Test Data('Final_news.csv') with contain in this Repo
-# optional arguments:
-*  -h, --help    show this help message and exit
-*  -path PATH    File path
-*  -model MODEL  [xlnet-base-cased,distilbert-base-uncased,albert-base-v1]
-
+* summarizer.py
+* runner.py
+# you can choose models:
+models = {'bert':'bert-base-uncased',
+           'xlnet':'xlnet-base-cased',
+           'distilbert':'distilbert-base-uncased',
+           'albert':'albert-base-v1',
+           'textT5':'Text-to-Text'}
+           
+enter model name like textT5 etc. 
 
 # Works for pretrainedModel of Bart:
 * BertModel('bert-base-uncased','bert-large-uncased')
@@ -26,12 +26,10 @@ By default it uses DistilBertModel and the Test Data('Final_news.csv') with cont
 # input:
 * .csv file with Description header.
 # output
-* .csv with BEfore and After summary Columns
+* a csv file is created containing two columns first of description second of summary !
 
 # Note: 
-This Repo is under Development by the ineuron Intern batch 
+This Repo is under Development by the Ineuron intern batch 
 
 # License
-© 2020 
-
-# This repository is licensed under the MIT license. See LICENSE for details.
+© 2020 This repository is licensed under the MIT license. See LICENSE for details.
