@@ -14,7 +14,7 @@ setup(
     description="It uses to summaries the Text using pretrained models of Bart and In this package DistilBertModel ass Default model to Sumarize the Text",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/khadar25/TextSumarization_DistilBertModel",
+    url="https://github.com/khadar25/Distilebart",
     author="Khadar vali",
     author_email="khadarv8977@gmail.com",
     license="MIT",

@@ -43,3 +43,10 @@ class TextSumarization():
                logger1.error("Invalid Exe:", exc_info=True)
         except Exception as e:
             logger1.error("Invalid path specified :",e, exc_info=True)
+
+    def model_selection(model):
+        models =['bert-base-uncased','xlnet-base-cased','distilbert-base-uncased','albert-base-v1']
+        if model in models:
+            return True
+        else:
+            raise RuntimeError("Select models only in this {} model list".format(models))
