@@ -1,7 +1,0 @@
-2020-08-08/21:32:23		Entered get data method loading the dataset now !
-2020-08-08/21:32:23		Entered get data method loading the dataset now !
-2020-08-08/21:32:29		Successfully loaded the model !
-2020-08-08/21:32:29		Successfully loaded the model,articles and tokenizer !
-2020-08-08/21:35:06		Successfully generated summaries !
-2020-08-08/21:35:06		Successfully wrote summaries to a csv file !
-2020-08-08/21:35:06		Process completed Successfully !

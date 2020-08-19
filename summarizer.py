@@ -2,6 +2,10 @@ import pandas as pd
 import numpy as np
 import sys
 import os
+import datetime 
+import logging
+import glob
+import os
 import transformers
 from transformers import T5Tokenizer, T5ForConditionalGeneration, T5Config
 import warnings
@@ -9,22 +13,30 @@ import warnings
 from application_logging.logger import App_Logger
 warnings.filterwarnings("ignore")
 
-
-class SummarizerModel:
+class SummarizerModel(App_Logger):
     
     def __init__(self,filepath,model):
-        self.logger_object = App_Logger()
-        self.general_logs = open("Logs/generallogs.txt",'+a')
-        self.success_file = open("Logs/successlogs.txt",'+a')
-        self.error_file = open("Logs/errorlogs.txt",'+a')
+
+        App_Logger.__init__(self)
+        self.CODE_DIR = os.getcwd()
+        self.success_logpath= self.CODE_DIR + '/logs/success/*'
+        self.list_of_success_files = glob.glob(self.success_logpath) 
+        self.latest_success_file = max(self.list_of_success_files, key=os.path.getctime)
+        # print(self.latest_success_file)
+        self.failure_logpath = self.CODE_DIR + '/logs/failure/*'
+        self.list_of_failure_files = glob.glob(self.failure_logpath) 
+        self.latest_error_file = max(self.list_of_failure_files, key=os.path.getctime)
+        # print(self.latest_error_file)
+
+        self.success_logger = self.create_success_logger(self.latest_success_file)
+        self.failure_logger = self.create_failure_logger(self.latest_error_file)
         self.filepath = filepath
         self.model = model
 
     def getdata(self):
         file_types=('csv','json','txt')
-        self.logger_object.log(self.general_logs,"Entering getdata Method !")
         try:
-            self.logger_object.log(self.success_file,"Entered get data method loading the dataset now !")
+            self.success_logger.info("Entered get data method loading the dataset now !")
             file_ext  = os.path.split(self.filepath)[-1].split(".")[-1]
             if file_ext in file_types:
                 if file_ext == "csv":
@@ -38,16 +50,14 @@ class SummarizerModel:
                 elif file_ext == "txt":
                     articles = open(self.filepath,'r')
                     return articles
-            self.logger_object.log(self.success_file,"Successfully read the data !")
+            self.success_logger.info("Successfully read the data !")
         except Exception as e:
-            self.logger_object.log(self.error_file,"Failed to load data INVALID file type provided :" + str(e))
+            self.failure_logger.error("Failed to load data INVALID file type provided :" + str(e))
             raise e
 
-    def getdataframe(self,filepath):
+    def getdataframe(self,filepath): # this function loads the dataset for making final summary dataset
         file_types=('csv','json','txt')
-        self.logger_object.log(self.general_logs,"Entering getdataframe Method !")
         try:
-            self.logger_object.log(self.success_file,"Entered get data method loading the dataset now !")
             file_ext  = os.path.split(self.filepath)[-1].split(".")[-1]
             if file_ext in file_types:
                 if file_ext == "csv":
@@ -61,43 +71,39 @@ class SummarizerModel:
                 elif file_ext == "txt":
                     articles = open(self.filepath,'r')
                     # return articles
-            self.logger_object.log(self.success_file,"Successfully read the data !")
         except Exception as e:
-            self.logger_object.log(self.error_file,"Failed to load data INVALID file type provided :" + str(e))
             raise e
 
 
     def loadmodel(self):
-        self.logger_object.log(self.general_logs,"Entering loadmodel method !")
+        self.success_logger.info("Entering loadmodel method !")
         try:
-            self.logger_object.log(self.general_logs,"Checking the model name entered by user!")
             if self.model == 'Text-to-Text':
                 Model = T5ForConditionalGeneration.from_pretrained('t5-small')
                 tokenizer = T5Tokenizer.from_pretrained('t5-small')
             else:
                 Model = Summarizer(self.model)
-            self.logger_object.log(self.success_file,"Successfully loaded the model !")
+            self.success_logger.info("Successfully loaded the model !")
         except Exception as e:
-            self.logger_object.log(self.error_file,"Failed to load the model :" + str(e))
+            self.failure_logger.error("Failed to load the model :" + str(e))
             raise e
         return Model,tokenizer 
 
     
     def getsummary(self):
         summaries = []
-        self.logger_object.log(self.general_logs,"Entered getsummary method ")
+        self.success_logger.info("Entered getsummary method")
         try:
-            self.logger_object.log(self.general_logs,"Trying to load model,articles,tokenizer !")
+            self.success_logger.info("Trying to load model,articles,tokenizer !")
             self.articles = self.getdata()
             self.Model,self.tokenizer = self.loadmodel()
-            self.logger_object.log(self.success_file,"Successfully loaded the model,articles and tokenizer !")
+            self.success_logger.info("Successfully loaded the model,articles and tokenizer !")
         except Exception as e:
-            self.logger_object.log(self.error_file,"Failed to get the model, articles and tokenizer !")
+            self.failure_logger.error("Failed to get the model, articles and tokenizer !" + str(e))
             raise e
 
-        self.logger_object.log(self.general_logs,"Entered step of extracting summaries !")
         try:
-            self.logger_object.log(self.general_logs,"Generating summaries now !")
+            self.success_logger.info("Generating summaries now !")
             if self.model == 'Text-to-Text':
                 for i in self.articles:
                     preprocess_text = i.strip().replace("\n","")
@@ -117,9 +123,9 @@ class SummarizerModel:
                     output_text = self.Model(i,min_length=60)
                     summary_text = ''.join(output_text)
                     summaries.append(summary_text)
-            self.logger_object.log(self.success_file,"Successfully generated summaries !")
+            self.success_logger.info("Successfully generated Summaries !")
 
         except Exception as e:
-            self.logger_object.log(self.error_file,"Failed to generate summaries !" + str(e))
+            self.failure_logger.error("Failed to generate summaries !" + str(e))
             raise e
         return summaries
