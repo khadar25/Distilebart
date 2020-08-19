@@ -1,0 +1,29 @@
+[08-19 09:12:57] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:41 (Line No.)} INFO - File read Successfully
+[08-19 09:12:59] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:202 (Line No.)} INFO - http://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms ----> Started
+[08-19 09:13:02] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:175 (Line No.)} INFO - http://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms ----> Completed (Found 20 news)
+[08-19 09:13:04] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:202 (Line No.)} INFO - http://economictimes.indiatimes.com/industry/auto/rssfeeds/13359412.cms ----> Started
+[08-19 09:13:06] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:175 (Line No.)} INFO - http://economictimes.indiatimes.com/industry/auto/rssfeeds/13359412.cms ----> Completed (Found 20 news)
+[08-19 09:13:08] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:202 (Line No.)} INFO - http://economictimes.indiatimes.com/industry/telecom/rssfeeds/13354103.cms ----> Started
+[08-19 09:13:10] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:175 (Line No.)} INFO - http://economictimes.indiatimes.com/industry/telecom/rssfeeds/13354103.cms ----> Completed (Found 20 news)
+[08-19 09:13:12] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:202 (Line No.)} INFO - http://economictimes.indiatimes.com/tech/hardware/rssfeeds/13357565.cms ----> Started
+[08-19 09:13:15] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:175 (Line No.)} INFO - http://economictimes.indiatimes.com/tech/hardware/rssfeeds/13357565.cms ----> Completed (Found 20 news)
+[08-19 09:13:17] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:202 (Line No.)} INFO - http://economictimes.indiatimes.com/tech/software/rssfeeds/13357555.cms ----> Started
+[08-19 09:13:19] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:175 (Line No.)} INFO - http://economictimes.indiatimes.com/tech/software/rssfeeds/13357555.cms ----> Completed (Found 20 news)
+[08-19 09:13:21] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:202 (Line No.)} INFO - http://economictimes.indiatimes.com/tech/ites/rssfeeds/40274504.cms ----> Started
+[08-19 09:13:23] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:175 (Line No.)} INFO - http://economictimes.indiatimes.com/tech/ites/rssfeeds/40274504.cms ----> Completed (Found 20 news)
+[08-19 09:13:23] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:223 (Line No.)} INFO - 120 news scrapped from all Urls
+[08-19 09:13:23] p11704 {C:\Users\Kartik\miniconda3\envs\summariser\lib\site-packages\Rss_Feed\Rss.py:224 (Line No.)} INFO - File has been successfully Saved
+[08-19 09:13:23] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:95 (Line No.)} INFO - Entered getsummary method
+[08-19 09:13:23] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:95 (Line No.)} INFO - Entered getsummary method
+[08-19 09:13:23] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:97 (Line No.)} INFO - Trying to load model,articles,tokenizer !
+[08-19 09:13:23] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:97 (Line No.)} INFO - Trying to load model,articles,tokenizer !
+[08-19 09:13:23] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:39 (Line No.)} INFO - Entered get data method loading the dataset now !
+[08-19 09:13:23] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:39 (Line No.)} INFO - Entered get data method loading the dataset now !
+[08-19 09:13:23] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:79 (Line No.)} INFO - Entering loadmodel method !
+[08-19 09:13:23] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:79 (Line No.)} INFO - Entering loadmodel method !
+[08-19 09:13:26] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:86 (Line No.)} INFO - Successfully loaded the model !
+[08-19 09:13:26] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:86 (Line No.)} INFO - Successfully loaded the model !
+[08-19 09:13:26] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:100 (Line No.)} INFO - Successfully loaded the model,articles and tokenizer !
+[08-19 09:13:26] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:100 (Line No.)} INFO - Successfully loaded the model,articles and tokenizer !
+[08-19 09:13:26] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:106 (Line No.)} INFO - Generating summaries now !
+[08-19 09:13:26] p11704 {C:\Users\Kartik\Desktop\Text_summarization\updated_code\summarizer.py:106 (Line No.)} INFO - Generating summaries now !
