@@ -3,4 +3,4 @@ Text Summarization using Distilebart
 
 
 to run - 
-python runner.py textT5
+```python runner.py textT5```
